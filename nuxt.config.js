@@ -115,30 +115,30 @@ export default {
     // ? Safelisting docs: https://purgecss.com/safelisting.html
     safelist: {
       // standard: [],
-      deep: [/dark/, /light/, /btn/, /icon/, /main/],
+      // deep: [/dark/, /light/, /btn/, /icon/, /main/],
       greedy: [
-        /^card/,
-        /image$/,
-        /title$/,
-        /^nuxt-content/,
-        /code/,
-        /pre/,
-        /token/,
-        /^vue-content-placeholders/
+        // /^card/,
+        // /image$/,
+        // /title$/,
+        // /^nuxt-content/,
+        // /code/,
+        // /pre/,
+        // /token/,
+        // /^vue-content-placeholders/
       ]
     }
   },
-  colorMode: {
-    classSuffix: '',
-    preference: 'system', // default value of $colorMode.preference
-    fallback: COLOR_MODE_FALLBACK, // fallback value if not system preference found
-    componentName: 'ColorScheme',
-    cookie: {
-      options: {
-        sameSite: 'lax'
-      }
-    }
-  },
+  // colorMode: {
+  //   classSuffix: '',
+  //   preference: 'system', // default value of $colorMode.preference
+  //   fallback: COLOR_MODE_FALLBACK, // fallback value if not system preference found
+  //   componentName: 'ColorScheme',
+  //   cookie: {
+  //     options: {
+  //       sameSite: 'lax'
+  //     }
+  //   }
+  // },
   pwa: {
     icon: {
       source: 'static/icon.png',

@@ -58,7 +58,7 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-.icon {
+/* .icon {
   width: 44px;
   height: 44px;
   background-color: var(--bg-secondary);
@@ -85,6 +85,6 @@ export default {
       @apply text-primary-900 bg-primary-200;
     }
   }
-}
+} */
 
 </style>

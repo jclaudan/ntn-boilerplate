@@ -9,7 +9,26 @@
         class="card card--clickable"
       >
         <template v-if="postType === 'projects'">
-          <span class="flex-1">
+          <!--  -->
+          <div class="card text-center border-2 border-white mb-6">
+            <h6 class="inline-block mt-2 bg-gray text-white text-sm font-medium rounded-sm">{{ post.category }}</h6>
+            <figure class="px-6 pt-2">
+              <img
+                v-if="post.cover"
+                class="cover-image rounded-xl"
+                :src="post.cover"
+              >
+            </figure> 
+            <div class="card-body">
+              <h2 class="card-title text-black">{{ post.title }}</h2> 
+              <p class="text-black">{{ post.description }}</p> 
+              <!-- <div class="justify-center card-actions">
+                <button class="btn btn-outline btn-accent">More info</button>
+              </div> -->
+            </div>
+          </div>
+          <!--  -->
+          <!-- <span class="flex-1">
             <h6 class="inline-block py-1 px-2 mr-1 bg-gray text-white text-sm font-medium rounded-sm">{{ post.category }}</h6>
             <h3 class="card-title">{{ post.title }}</h3>
             <p class="mt-2">{{ post.description }}</p>
@@ -18,11 +37,29 @@
             v-if="post.cover"
             class="cover-image"
             :src="post.cover"
-          >
+          > -->
         </template>
 
         <template v-else>
-          <span class="w-full">
+          <!--  -->
+          <div class="card lg:card-side bordered">
+            <div class="card-body">
+              <h2 class="card-title text-black">{{ post.title }}</h2>
+              <h6
+                v-if="post.createdAt"
+                class="text-black self-start inline-block mt-0 py-1 px-2 bg-gray text-base font-medium rounded-sm whitespace-no-wrap"
+              >
+                {{ formatDate(post.createdAt) }}
+              </h6>
+              <p class="text-black">{{ post.description }}</p> 
+              <!-- <div class="card-actions">
+                <button class="btn btn-primary">Get Started</button> 
+                <button class="btn btn-ghost">More info</button>
+              </div> -->
+            </div>
+          </div>
+          <!--  -->
+          <!-- <span class="w-full">
             <span class="flex justify-between align-baseline">
               <h3 class="card-title">{{ post.title }}</h3>
               <h6
@@ -31,7 +68,7 @@
               >{{ formatDate(post.createdAt) }}</h6>
             </span>
             <p class="mt-2">{{ post.description }}</p>
-          </span>
+          </span> -->
         </template>
       </nuxt-link>
     </li>

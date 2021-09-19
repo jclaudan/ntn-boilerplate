@@ -1,7 +1,7 @@
 <template>
   <main>
     <section v-if="post">
-      <nav class="mb-8" aria-label="go back">
+      <nav class="mb-8 text-black" aria-label="go back">
         <router-back class="block" />
       </nav>
 
@@ -12,9 +12,9 @@
           :src="post.cover"
         >
         <!-- <h6 class="inline py-1 px-2 mr-1 bg-gray text-white text-sm font-medium rounded-sm">{{ post.category }}</h6> -->
-        <h1 class="">{{ post.title }}</h1>
-        <p class="mt-1 mb-8 text-primary-600 dark:text-primary-400">{{ post.description }}</p>
-        <nuxt-content :document="post" />
+        <h1 class="text-black">{{ post.title }}</h1>
+        <p class="mt-1 mb-8 text-black">{{ post.description }}</p>
+        <nuxt-content class="text-black" :document="post" />
         <div v-if="post.gallery" class="nuxt-content">
           <img
             v-for="image in post.gallery"

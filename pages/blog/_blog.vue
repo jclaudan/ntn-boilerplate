@@ -1,18 +1,18 @@
 <template>
   <main>
     <section v-if="post">
-      <nav class="mb-8" aria-label="go back">
+      <nav class="mb-8 text-black" aria-label="go back">
         <router-back class="block" />
       </nav>
 
       <article>
         <h5
           v-if="post.createdAt"
-          class="inline-block py-1 px-2 my-2 bg-gray text-white text-sm font-medium rounded-sm whitespace-no-wrap"
+          class="inline-block py-1 px-2 my-2 bg-gray text-black text-sm font-medium rounded-sm whitespace-no-wrap"
         >{{ formatDate(post.createdAt) }}</h5>
-        <h1 class="">{{ post.title }}</h1>
-        <p class="mt-1 mb-4 text-primary-600 dark:text-primary-400">{{ post.description }}</p>
-        <nuxt-content :document="post" />
+        <h1 class="text-black">{{ post.title }}</h1>
+        <p class="mt-1 mb-4 text-black">{{ post.description }}</p>
+        <nuxt-content class="text-black" :document="post" />
       </article>
     </section>
   </main>
